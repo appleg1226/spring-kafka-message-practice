@@ -26,16 +26,20 @@ public class MessageObject {
 
 ## Producer 부분 구현
 
->- KafkaTopicConfig.java: KafkaAdmin을 bean으로 등록하고, NewTopic을 bean으로 등록하면 자동으로 브로커에 Topic을 등록해준다. 
+```
+- KafkaTopicConfig.java: KafkaAdmin을 bean으로 등록하고, NewTopic을 bean으로 등록하면 자동으로 브로커에 Topic을 등록해준다. 
 
->- KafkaProducerConfig.java: Kafka Producer에 대한 설정을 등록한다.
+- KafkaProducerConfig.java: Kafka Producer에 대한 설정을 등록한다.
 
->- KafkaProducer.java: Kafka 메시지 전송을 비동기로 구현. MessageObject와 String 두 가지로 보낼 수 있도록 구현.
+- KafkaProducer.java: Kafka 메시지 전송을 비동기로 구현. MessageObject와 String 두 가지로 보낼 수 있도록 구현.
 
->- KafkaProducerTest.java: Kafka 메시지 전송 후, ListenableFuture를 반환받아 콜백 확인.
+- KafkaProducerTest.java: Kafka 메시지 전송 후, ListenableFuture를 반환받아 콜백 확인.
+```
 
 ## Consumer 부분 구현
 
->- KafkaConsumerConfig.java: Kafka Consumer, Listener에 대한 설정을 등록한다.
+```
+- KafkaConsumerConfig.java: Kafka Consumer, Listener에 대한 설정을 등록한다.
 
->- KafkaConsumer.java: MessageObject와 String 두 가지를 다른 Topic이름으로 받을 수 있도록 구현. 
+- KafkaConsumer.java: MessageObject와 String 두 가지를 다른 Topic이름으로 받을 수 있도록 구현. 
+```
