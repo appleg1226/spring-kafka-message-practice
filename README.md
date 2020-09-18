@@ -3,9 +3,12 @@
 spring과 kafka client를 이용한 producer, consumer 코드 작성 연습 프로젝트 <br/>
 
 Spring Kafka 통합 라이브러리를 이용하여 개발(Spring boot 2.3.3 기반)
+
+Reactor Kafka 추가하여 Reactive Producer Bean 
 ```
 dependencies {
 	implementation 'org.springframework.kafka:spring-kafka'
+	compileOnly "io.projectreactor.kafka:reactor-kafka:1.3.0-SNAPSHOT"
 }
 ```
 ## 프로젝트 구현 목적
